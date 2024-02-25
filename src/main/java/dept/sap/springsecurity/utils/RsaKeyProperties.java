@@ -8,8 +8,6 @@ import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
-@Getter
-@Setter
 @Component
 public class RsaKeyProperties {
     private RSAPublicKey publicKey;
@@ -19,5 +17,13 @@ public class RsaKeyProperties {
         KeyPair pair = KeyGeneratorUtility.generateRsaKey();
         this.publicKey = (RSAPublicKey) pair.getPublic();
         this.privateKey = (RSAPrivateKey) pair.getPrivate();
+    }
+
+    public RSAPublicKey getPublicKey() {
+        return this.publicKey;
+    }
+
+    public RSAPrivateKey getPrivateKey() {
+        return this.privateKey;
     }
 }

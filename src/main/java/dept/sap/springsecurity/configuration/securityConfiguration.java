@@ -30,8 +30,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class securityConfiguration {
     private final RsaKeyProperties keys;
-
-    @Autowired
     public securityConfiguration(RsaKeyProperties keys){
         this.keys=keys;
     }
